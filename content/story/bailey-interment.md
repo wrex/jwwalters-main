@@ -1,6 +1,6 @@
 ---
 title: "Bailey - Words for Jerry"
-date: 2016-11-25
+date: 2017-11-25
 draft: false
 icon: "fa-diamond"
 ---
@@ -24,4 +24,4 @@ I cherish every lesson and every quality I got from Papa. And so while my heart 
 
 Bailey
 
-11/25/2016
+11/25/2017
