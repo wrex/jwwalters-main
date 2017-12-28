@@ -2,16 +2,22 @@
   <div class="content">
     <h1>{{.Title}}</h1>
     <div class="inner">
-      {{ range .Pages.GroupByDate "January" "asc" }}
-        <section>
-          <h2>{{ .Key }}</h2>
-          <ul>
-            {{ range .Pages.ByDate }}
-              <li><a href="{{.URL}}">{{.Title}}</a></li>
-            {{ end }}
-          </ul>
-        </section>
-      {{ end }}
+      <div class="items style3 medium`">
+        {{ range .Pages.GroupByDate "January" "asc" }}
+          <section style="padding: 10px;">
+            <h4>{{ .Key }}</h4>
+            <ul class = "alt">
+              {{ range .Pages.ByDate }}
+                <li>
+                  <font size="-1">
+                    <a href="{{.URL}}">{{.Date.Format "2"}} - {{dateFormat "2" .Params.enddate}}</a>
+                  </font>
+                </li>
+              {{ end }}
+            </ul>
+          </section>
+        {{ end }}
+      </div>
     </div>
   </div>
   <div class="image">
