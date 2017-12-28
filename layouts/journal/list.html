@@ -1,0 +1,11 @@
+{{ define "main" }}
+		{{ if eq .CurrentSection (.Site.GetPage "section" "journal") }}
+			<!-- Top level of journal section — show the years -->
+			{{ partial "journal-top.html" . }}
+
+		{{else}}
+			<!-- Not the top level, show the spreads within the year -->
+			{{ partial "journal-month.html" . }}
+
+		{{end}}		
+{{end}}

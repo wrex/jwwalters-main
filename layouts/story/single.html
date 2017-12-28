@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<!--
+	Story by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Note: Only needed for demo purposes. Delete for production sites.
+-->
+<html>
+	<head>
+		<title>{{ .Title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+					<section class="wrapper style1 align-left">
+						<div class="wrapper align-center"><a href="/index.html#stories" class="icon style2 major {{.Params.icon}}"></a></div>
+					<div class="inner">
+						<h2>{{ .Title }}</h2>
+						{{ .Content }}
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer class="wrapper style1 align-center">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="/" class="icon style2 fa-home"><span class="label">Home</span></a></li>
+							<li><a href="mailto:rex.home+jww@gmail.com" class="icon style2 fa-envelope"><span class="label">Contact Us</span></a></li>
+						</ul>
+						<p>&copy; {{.Site.Params.copyright}}</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/jquery.scrollex.min.js"></script>
+			<script src="/js/jquery.scrolly.min.js"></script>
+			<script src="/js/skel.min.js"></script>
+			<script src="/js/util.js"></script>
+			<script src="/js/main.js"></script>
+
+	</body>
+</html>

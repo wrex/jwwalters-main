@@ -1,0 +1,95 @@
+{{ define "main" }}
+				<!-- Banner -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Remembering Jerry</h1>
+							<h2>8/26/1936 &ndash; 8/16/2017</h2>
+							<p class="major">This site is dedicated to the memory of Jerry Willard Walters.</p>
+							<p>Please join the Walters family in remembering our much loved Papa. Jerry was an unforgettably funny and truly unique character. Though he was often demanding and sometimes irritating, he was a kind, happy, and intelligent man who left his mark on a lot of people. Please join us in celebrating the stories from a fascinating, and extremely well-lived life.</p>
+							<p>As Papa would say, "I'm glad you got to see me!"</p>
+							<ul class="actions">
+								<li><a href="#stories" class="button small smooth-scroll-middle">Stories</a></li>
+								<li><a href="#photos" class="button small smooth-scroll-middle">Photos</a></li>
+								<li><a href="/journal/" class="button small smooth-scroll-middle">Journal</a></li>
+								<li><a href="#service" class="button small smooth-scroll-middle">Service</a></li>
+								<li><a href="mailto:rex.home+jww@gmail.com" class="button small smooth-scroll-middle">Contact</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="img/banner.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Stories -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2 id="stories">Stories</h2>
+							<p>The family wanted to share just a few of the great stories from Jerry's life, as well as some of the family messages that were read at his service. If you have a story that you'd like to share, please <a href="mailto:rex.home+jww@gmail.com">send it to us</a>. We'd love to share your stories with everyone.
+
+							<div class="items style2 medium ">
+								{{ range where .Data.Pages "Section" "story" -}}
+								<section>
+									<a href="{{ .RelPermalink }}" class="icon style2 major {{.Params.icon}}"></a>
+									<div class="wrapper align-left">
+										<h3>{{.Title}}</h3>
+										{{.Summary}}
+										{{ if .Truncated }}
+										      <div>
+											  <a href="{{ .RelPermalink }}">Read More…</a>
+										      </div>
+										{{ end }}
+									</div>
+								</section>
+								{{ end -}}
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Photo Gallery -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Photo Gallery</h2>
+							<p>Here are just a few of our favorite photos to remember Jerry.</p>
+						</div>
+
+						<div class="gallery style2 small lightbox onscroll-fade-in" id="photos">
+							{{ range where .Data.Pages "Section" "photo" -}}
+							<article>
+								<a href="/img/gallery/{{.Params.imgsrc}}" class="image">
+									<img src="/img/gallery/{{.Params.imgsrc}}" alt="" />
+								</a>
+								<div class="caption">
+								{{.Content}}
+								</div>
+							</article>
+							{{ end -}}
+						</div>
+
+					</section>
+
+
+				<!-- Service -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content" id="service">
+							<h2>Obituary and Service</h2>
+							<p>Jerry Willard Walters, 80, of Frederick County, Virginia passed away Wednesday, August 16, 2017 at Winchester Medical Center.</p>
+
+<p>Mr. Walters was born in 1936 in Paducah, Kentucky, the son of the late Rex and Dorothy Walters; stepson of Doris Walters. He graduated from University of Maryland earning a Bachelor of Arts degree in Sociology. Mr. Walters was a veteran of the United States Navy having served during the Vietnam era achieving the rank of Lieutenant Commander. He was a Security Analyst for the U.S. Navy and a Federal Intelligence Officer for the United States Government, retiring in 1993. Mr. Walters was a member and past President of the International Association of Law Enforcement Intelligence Analysts; he enjoyed playing the guitar, listening to old time hillbilly music, making home videos, and playing board games and card games; he was an exceptional trivia buff. Mr. Walters enjoyed traveling throughout Asia with his wife, Rita, whom he married on October 10, 1960 in Suitland, Maryland. A loving husband, father, grandfather, brother, and friend to so many. He will be missed.</p>
+
+<p>Surviving with his beloved wife of 56 years are son, Rex Walters and wife, Chikage; son, Wade Walters; daughter, Stacy Lee Hawkey and husband, Brian; grandchildren, Charlton, Rena, and Kimi Walters; Emily and Samuel Walters; Matthew and Bailey Hutchinson; sister, Carol Jean Rose and husband, Ron; brother, James Ray Walters; and many loving nieces, nephews, cousins, and dear friends including his high school buddies and Navy friends.</p>
+
+<p>A gathering of family and friends occurred on Saturday, August 19, 2017 at Omps Funeral Home, Amherst Chapel. The Memorial Service was officiated by Pastor Mike Mayton, and a reception followed the service.</p>
+
+<p>Memorial contributions in memory of Jerry may be made to <a href="http://www.alz.org/nca/in_my_community_58187.asp">Alzheimer’s Association National Capital Area Chapter, 8180 Greensboro Drive, #400, McLean, Virginia 22102</a> or <a href="http://donate.dav.org/site/Donation2?df_id=9420&9420.donation=form1">Disabled American Veterans, P.O. Box 14301, Cincinnati, Ohio 45250-0301.</a></p>
+
+<p>As Jerry would say after your visit, “I’m glad you got to see me!”</p>
+							<ul class="actions vertical">
+								<li><a href="/img/service_flyer.pdf" class="button">Service Flyer</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<a href="/img/service_flyer.pdf"><img src="img/flyer.png" alt="" /></a>
+						</div>
+					</section>
+{{ end }}

@@ -1,0 +1,20 @@
+<div class="banner style1 orient-left onload-image-fade-in" >
+  <div class="content">
+    <h1>{{.Title}}</h1>
+    <div class="inner">
+      {{ range .Pages.GroupByDate "January" "asc" }}
+        <section>
+          <h2>{{ .Key }}</h2>
+          <ul>
+            {{ range .Pages.ByDate }}
+              <li><a href="{{.URL}}">{{.Title}}</a></li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+    </div>
+  </div>
+  <div class="image">
+    <img src="/img/journal/{{.Params.imgsrc}}" alt="" />
+  </div>
+</div>

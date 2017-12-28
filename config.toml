@@ -1,0 +1,10 @@
+baseURL = "http://jwwalters.me/"
+languageCode = "en-us"
+title = "Jerry Willard Walters"
+theme = "story"
+
+[params]
+  name = "Lt. Jerry Willard Walters"
+  description = "United States Navy"
+  description2 = "Aug 26, 1936 – Aug 16, 2017"
+  copyright = "2017 Walters Family Trust"

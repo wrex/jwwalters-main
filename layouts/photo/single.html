@@ -1,0 +1,14 @@
+{{ define "main" }}
+		<h1>This is photo/single.html after modification</h1>
+		<p>{{.Next.URL}}</p>
+		<p>{{.Prev.URL}}</p>
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+				<section class="wrapper style1 align-left">
+					<span class="image left"><img src="/img/Gallery/IMG_7701.jpg" alt="" /></span>
+					<div class="inner">
+						{{ .Content }}
+					</div>
+				</section>
+			</div>
+{{ end }}

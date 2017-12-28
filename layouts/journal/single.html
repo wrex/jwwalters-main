@@ -1,0 +1,24 @@
+{{ define "main" }}
+	<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+		<div class="content">
+				<h2>Jerry's Journal</h2>
+				<h3>{{ .Date.Format "January, 2006"}}</h3>
+				<h4>{{ .Date.Format "Mon 1/2"}} &mdash; {{ dateFormat "Mon 1/2" .Params.enddate }}</h5>
+				<ul class="actions fit">
+					<li title="Previous page-spread">{{if .PrevInSection }} <a href="{{.PrevInSection.URL}}" class="icon style1 fa-backward"><span class="label">Prev</span></a> {{else}} <span class="icon style1 fa-stop"></span>{{end}}</li>
+					<li title="Home"><a href="/" class="icon style1 fa-home"><span class="label">Home</span></a></li>
+					<li title="Journal years"><a href="/journal" class="icon style1 fa-book"><span class="label">Journal Year</span></a></li>
+					<li title="Page-spreads by month"><a href="{{.Parent.URL}}" class="icon style1 fa-calendar"><span class="label">Journal Month</span></a></li>
+					<li title="Next page-spread">{{if .NextInSection }} <a href="{{.NextInSection.URL}}" class="icon style1 fa-forward"><span class="label">Next</span></a> {{else}} <span class="icon style1 fa-stop"></span>{{end}}</li>
+				</ul>
+			</div>
+			<div class="image">
+				<a href="{{.Params.imgsrc}}"><img src="{{.Params.imgsrc}}" alt="{{.Params.imgsrc}}" /></a>
+			</div>
+		</section>
+		<div class="index align-left">
+			<div class="content">
+				{{.Content}}
+			</div>
+		</div>
+{{ end }}
